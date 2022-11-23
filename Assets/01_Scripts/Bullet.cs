@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 10;
-    public float damage = 5;
+    public float speed = 7;
+
     public float timeToDestroy = 10;
     public GameObject explosion;
+
 
     void Start()
     {
@@ -17,5 +18,7 @@ public class Bullet : MonoBehaviour
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
+
+    
 
 }
