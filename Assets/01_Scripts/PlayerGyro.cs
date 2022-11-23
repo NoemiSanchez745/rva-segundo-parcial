@@ -9,7 +9,7 @@ public class PlayerGyro : MonoBehaviour
     public bool gyroEnabled = true;
     float sensivity = 50f;
     Gyroscope gyro;
-
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +33,7 @@ public class PlayerGyro : MonoBehaviour
 
             float yFilterd = FilterGyroValue(y);
             transform.RotateAround(transform.position, transform.up, -yFilterd * sensivity * Time.deltaTime);
+            Rotar(y);
         }
     }
 
@@ -45,6 +46,20 @@ public class PlayerGyro : MonoBehaviour
         else
         {
             return 0;
+        }
+    }
+
+    private void Rotar(float x2)
+    {
+        if (x2 >= 345f && x2 <= 355f)
+        {
+            float rotationTime = 5f;
+            player.transform.Rotate(Vector3.down * (rotationTime * Time.deltaTime));
+        }
+        else if (x2 >= 5f && x2 <= 15f)
+        {
+            float rotationTime = 5f;
+            player.transform.Rotate(Vector3.up * (rotationTime * Time.deltaTime));
         }
     }
 }

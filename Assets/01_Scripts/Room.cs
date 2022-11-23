@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    public float speed = 15;
+    public float speed = 20;
 
     void Start()
     {

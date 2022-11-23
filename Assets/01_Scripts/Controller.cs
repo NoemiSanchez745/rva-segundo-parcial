@@ -21,6 +21,6 @@ public class Controller : MonoBehaviour
         Debug.Log("Entró a start Game");
         startPanel.SetActive(false);
         Time.timeScale = 1;
-        SceneManager.LoadScene("Game");
+        //SceneManager.LoadScene("Game");
     }
 }

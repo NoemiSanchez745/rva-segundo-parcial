@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
+    
     public GameObject player;
     private Gyroscope gyro;
     //private bool gyroEnable = false;
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour
     Inputs inputs;
 
     public GameObject startGame;
+
     private void Awake()
     {
         inputs = new Inputs();
@@ -152,7 +154,7 @@ public class Player : MonoBehaviour
         life -= damage;
         lifeBar.fillAmount = life / maxLife;/*500/500 = 1*/
         Time.timeScale = 0;
-        startGame.SetActive(true);
+        //startGame.SetActive(true);
         
     }
 
@@ -165,7 +167,7 @@ public class Player : MonoBehaviour
             //Player p = other.gameObject.GetComponent<Player>();
             /*Una vez colisionado con el Player debemos hacerle daño*/
             //p.TakeDamge(50f);
-            TakeDamge(50f);
+            TakeDamge(5f);
             /*Una vez colisionado y causado daño la bala se destruye*/
             //Destroy(other.gameObject);
             /*Recordad que el Object Player debe tener el tag Player en la interfaz*/

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4128924196394134745}
   m_Layer: 0
   m_Name: Enemy_1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,6 +116,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 871975340257708766, guid: e2d4313dca48ccd4dbc731b47b69055f, type: 3}
   lifeBarEnemy: {fileID: 8870999658815866093}
   maxLifeEnemy: 500
+  lifeEnemy: 0
 --- !u!1 &4300530685157216314
 GameObject:
   m_ObjectHideFlags: 0

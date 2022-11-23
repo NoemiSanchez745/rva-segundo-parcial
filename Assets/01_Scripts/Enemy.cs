@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 {
     
     public Transform firePointEnemy;
-    float bulletSpeed = 2000;
+    float bulletSpeed = 2000f;
     float timer = 0;
     public GameObject sootSound;
     public GameObject efectExplosion;
@@ -60,19 +60,20 @@ public class Enemy : MonoBehaviour
         lifeEnemy -= damage;
         lifeBarEnemy.fillAmount = lifeEnemy / maxLifeEnemy;/*500/500 = 1*/
     }
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    Debug.Log("Entro al triger de Enemy");
+    //    if (other.tag == "Bullet2")
+    //    {
+    //        Debug.Log("Se detectó daño del Player al enemigo");
+    //        //TakeDamge(500f);
+    //        //Destroy(other.gameObject);
+    //    }
+    //}
     private void OnDestroy()
     {
         Instantiate(efectExplosion, this.gameObject.transform.position, this.gameObject.transform.rotation);
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Entro al triger de Enemy");
-        if (other.tag=="Bullet")
-        {
-            Debug.Log("Se detectó daño del Player al enemigo");
-            //TakeDamge(500f);
-            //Destroy(other.gameObject);
-        }
-    }
+    
 }

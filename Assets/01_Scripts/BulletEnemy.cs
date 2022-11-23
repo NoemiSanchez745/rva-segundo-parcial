@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletEnemy : MonoBehaviour
 {
-    //public float speed = 7;
+    public float speed = 7;
 
     //public float timeToDestroy = 10;
     //public GameObject explosion;
@@ -19,7 +19,7 @@ public class BulletEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // transform.Translate(Vector3.forward * speed * Time.deltaTime);
+       transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
     /*Creamos una referencia al script del Player si es que hemos colisionado con él*/

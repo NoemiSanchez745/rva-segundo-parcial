@@ -5,10 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 7;
-
-    public float timeToDestroy = 10;
-    public GameObject explosion;
-
+    //public GameObject explosion;
 
     void Start()
     {
@@ -19,6 +16,18 @@ public class Bullet : MonoBehaviour
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
-    
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Entro al triger de Enemy");
+        if (other.tag == "Enemy")
+        {
+            Debug.Log("Se detectó daño del Player al enemigo");
+            Enemy e = other.gameObject.GetComponent<Enemy>();
+            e.TakeDamge(500f);
+            Destroy(other.gameObject);
+        }
+    }
+
+
 
 }
