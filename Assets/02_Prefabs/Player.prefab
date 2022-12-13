@@ -366,7 +366,7 @@ MonoBehaviour:
   x: 0
   y: 0
   gyroEnabled: 1
-  player: {fileID: 0}
+  player: {fileID: 7562486585989393294}
 --- !u!1 &7562486586198358058
 GameObject:
   m_ObjectHideFlags: 0

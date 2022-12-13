@@ -768,11 +768,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &887537365 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7562486585989393294, guid: e317ed8419b4d6f49bf4703d8445af7f, type: 3}
-  m_PrefabInstance: {fileID: 7562486585248929115}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1202134355
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,7 +797,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ba60b7aa9df4d8f429d1f5536d0724ec, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.198
+  m_Volume: 0.32
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1941,10 +1936,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8918199919864701054, guid: e317ed8419b4d6f49bf4703d8445af7f, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 887537365}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e317ed8419b4d6f49bf4703d8445af7f, type: 3}
 --- !u!33 &7646998249147700592
